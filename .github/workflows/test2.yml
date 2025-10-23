@@ -1,1 +1,19 @@
+name: Test 2
+
+on:
+  repository_dispatch:
+    types: 
+      - Ai Agent
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run a script
+        run: echo "The action was triggered!"
 
