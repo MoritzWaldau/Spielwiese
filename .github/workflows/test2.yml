@@ -1,9 +1,6 @@
-name: Test 2
+name: Build ISTA AOS
 
 on:
-  repository_dispatch:
-    types: 
-      - Ai Agent
   workflow_dispatch:
 
 jobs:
@@ -16,4 +13,10 @@ jobs:
 
       - name: Run a script
         run: echo "The action was triggered!"
+
+      - name: Wait for 20 seconds
+        run: |
+          echo "Sleeping for 20 seconds..."
+          sleep 20
+          echo "Done waiting."
 
