@@ -1,9 +1,6 @@
 name: Test
 
 on:
-  repository_dispatch:
-    types: 
-      - Ai-Agent
   workflow_dispatch:
 
 jobs:
