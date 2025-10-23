@@ -1,4 +1,4 @@
-name: Test
+name: Build ISTA HO
 
 on:
   workflow_dispatch:
@@ -13,4 +13,10 @@ jobs:
 
       - name: Run a script
         run: echo "The action was triggered!"
+
+      - name: Wait for 20 seconds
+        run: |
+          echo "Sleeping for 20 seconds..."
+          sleep 20
+          echo "Done waiting."
 
