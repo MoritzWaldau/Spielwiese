@@ -1,7 +1,10 @@
 name: Test 
 
 on:
-  workflow_dispatch:
+  repository_dispatch:
+    types: 
+      - custom-event
+    workflow-dispatch:
 
 jobs:
   build:
