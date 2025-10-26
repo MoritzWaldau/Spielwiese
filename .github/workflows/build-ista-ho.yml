@@ -2,6 +2,10 @@ name: Build ISTA HO
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to build'
+        required: true
 
 jobs:
   build:
@@ -12,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run a script
-        run: echo "The action was triggered!"
+        run: echo "The action was triggered with the version: ${{ github.event.inputs.version }}"
 
       - name: Wait for 20 seconds
         run: |
